@@ -21,7 +21,8 @@ public class Train {
 
     private List<String> stations;
 
-    
+
+
     public Train(){}
 
     public Train(String trainId, String trainNo, List<List<Integer>> seats,
@@ -77,4 +78,3 @@ public class Train {
         return String.format("Train ID: %s Train No: %s", trainId, trainNo);
     }
 }
-

@@ -1,5 +1,14 @@
 package ticket.booking.entities;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
+import java.util.Collections;
 import java.util.List;
+
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class User {
 
@@ -8,7 +17,9 @@ public class User {
     private String password;
     private String hashedPassword;
     private List<Ticket> ticketsBooked;
-  public User(){}
+
+    // Constructor
+    public User(){}
 
     public User(String username, String password, String hashedPassword, List<Ticket> ticketsBooked, String userId){
         this.username = username;

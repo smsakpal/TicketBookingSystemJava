@@ -8,6 +8,7 @@ import java.util.Date;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+
 public class Ticket {
     //Fields
     private String ticketId;
@@ -17,7 +18,8 @@ public class Ticket {
     private String dateOfTravel;
     private Train train;
 
-public Ticket(){}
+    //Constructor
+    public Ticket(){}
 
     public Ticket(String ticketId, String userId, String source, String destination, String dateOfTravel, Train train){
         this.ticketId = ticketId;
